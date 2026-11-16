@@ -1,0 +1,48 @@
+# --- Сборка: venv и артефакты (пересоздаются build\build.bat) ---
+build/venv/
+build/dist/
+build/work/
+build/*.spec
+release/
+
+# --- Папка проверки на другом компьютере: exe пересобираются build.bat,
+# README.txt — в git (раунд 11) ---
+for tests/*.exe
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+
+# --- Временные файлы тестов ---
+frontend/tests/_tmp*/
+
+# --- Портативный конфиг GUI при запуске из исходников (раунд 12; имя и
+# BOM — раунд 19: ExportChat.cfg; db_profiles.cfg — заводской, В git) ---
+/config.json
+/ExportChat.cfg
+
+# --- Обязательный минимум ---
+node_modules/
+vendor/
+.tmp/
+.zwork/
+*.tmp
+*.log
+.vscode/
+.idea/
+.vs/
+
+# --- ОС ---
+Thumbs.db
+desktop.ini
+
+# --- План-режим ZCode и портативный конфиг в «for tests» (раунд 14/19) ---
+.zcode/
+for tests/config.json
+for tests/ExportChat.cfg
+# копия db_profiles.cfg в «for tests» генерируется build.bat из корневой
+for tests/db_profiles.cfg
+
+# --- Копии SQL-баз в «for tests» не должны попадать в git (раунд 18) ---
+for tests/AutoClaw SQL/
+for tests/ZCode SQL/
