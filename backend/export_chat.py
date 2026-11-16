@@ -6,7 +6,8 @@
 Было CLI-движком с /api-контрактом; после слияния в один exe — модуль
 с классом AutoClawAdapter (интерфейс — backend/adapter.py). Ядро
 (загрузка сессий/артефактов, сборка ходов, рендеры, имена AC-*, суффиксы
-« (1)») не менялось. Repository: github.com/vadimrm/AutoClaw.Z.ai-ExportChat
+« (1)») не менялось. Репозиторий (GUI): github.com/vadimrm/Z.ai-ChatsExporter; материнский
+CLI-проект: github.com/vadimrm/AutoClaw.Z.ai-ExportChat
 """
 
 from __future__ import annotations

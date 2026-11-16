@@ -1,6 +1,6 @@
 # Z.ai Chats Exporter by Vadim R.M. ver. 1.27
 
-项目 **AutoClaw.Z.ai-ExportChat**：将 AutoClaw 和 ZCode 对话导出为 Markdown、TXT 和 JSON
+**AutoClaw.Z.ai-ExportChat** 项目的 GUI 分支（母项目为同名的 AutoClaw 对话导出命令行工具）：将 AutoClaw 和 ZCode 对话导出为 Markdown、TXT 和 JSON
 
 Windows 桌面程序：读取 AutoClaw 与 ZCode 的本地对话数据库，把对话保存为文件——Markdown、纯文本或 JSON。单个 exe，无需安装 Python：数据库适配器与窗口在同一进程中运行（AGREEMENTS.md，第 19 轮——引擎已并入 GUI，命令行已移除）。
 
@@ -21,6 +21,12 @@ Copyright © 2026 by Vadim Madgazin & ZCode (Z.ai)
 - 数据库以只读方式打开（mode=ro），AutoClaw/ZCode 无需关闭；ZCode 数据库被占用时自动读取临时副本；
 - 文件永不覆盖：重复导出自动加 ` (1)`、` (2)`… 后缀；
 - 文件名格式：`AC-YYYY-MM-DD-<对话标题>.<ext>` / `ZC-YYYY-MM-DD-<对话标题>.<ext>`；ZCode 模式下对话还会按项目文件夹归档。
+
+## 环境要求
+
+- Windows 8.1 或更新版本，64 位（已在 8.1、10、11 上验证；Windows 7 无法运行——Python 3.12 构建不再支持该系统）；
+- 无需安装 Python；
+- 本机无需安装 AutoClaw 和 ZCode：数据库就是普通文件，程序可使用它们的**本地副本**——把 `runtime.sqlite` / `db.sqlite` 拷贝到 U 盘，用「SQL 数据库」按钮指定；这样即使 AutoClaw/ZCode 无法在旧版 Windows 上运行，也能导出对话。
 
 ## 安装与运行
 
@@ -91,7 +97,9 @@ ZCode——`~/.zcode/cli/db/db.sqlite`，表 `session` / `message` / `part`；�
 
 ## 相关链接
 
-仓库：<https://github.com/vadimrm/AutoClaw.Z.ai-ExportChat>
+仓库（GUI）：<https://github.com/vadimrm/Z.ai-ChatsExporter>
+
+母项目——AutoClaw 对话导出命令行工具：<https://github.com/vadimrm/AutoClaw.Z.ai-ExportChat>
 
 ## 许可证
 

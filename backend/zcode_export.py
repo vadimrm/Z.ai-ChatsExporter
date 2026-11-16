@@ -10,7 +10,8 @@ AutoClaw-адаптера: таблицы session/message/part, имена ZC-*,
 файлов не поддерживается (игнорируется). База открывается только на
 чтение; если она занята приложением ZCode, копируется (db+wal+shm) во
 временный каталог и читается копия (каталог убирает close()).
-Repository: github.com/vadimrm/AutoClaw.Z.ai-ExportChat
+Репозиторий (GUI): github.com/vadimrm/Z.ai-ChatsExporter; материнский
+CLI-проект: github.com/vadimrm/AutoClaw.Z.ai-ExportChat
 """
 
 from __future__ import annotations

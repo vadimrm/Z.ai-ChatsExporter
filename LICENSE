@@ -1,6 +1,6 @@
-﻿AutoClaw.Z.ai-ExportChat
-export AutoClaw chats to Markdown, TXT and JSON
-Version 1.3
+Z.ai Chats Exporter by Vadim R.M.
+export AutoClaw and ZCode chats to Markdown, TXT and JSON
+(parent project: AutoClaw.Z.ai-ExportChat)
 
 MIT License
 

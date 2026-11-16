@@ -1,6 +1,6 @@
 # Z.ai Chats Exporter by Vadim R.M. ver. 1.27
 
-Project **AutoClaw.Z.ai-ExportChat**: export AutoClaw and ZCode chats to Markdown, TXT and JSON
+GUI branch of the **AutoClaw.Z.ai-ExportChat** project (the parent is a console utility exporting AutoClaw chats): export AutoClaw and ZCode chats to Markdown, TXT and JSON
 
 A Windows desktop app: reads the local AutoClaw and ZCode chat databases and saves conversations to files — Markdown, plain text or JSON. One exe, no Python installation needed: the database adapters run in the same process as the window (AGREEMENTS.md, round 19 — the engines merged into the GUI, the command line is gone).
 
@@ -21,6 +21,12 @@ Copyright © 2026 by Vadim Madgazin & ZCode (Z.ai)
 - the database is opened read-only (mode=ro), so AutoClaw/ZCode can keep running; if the ZCode database is locked, a temporary copy is read;
 - files are never overwritten: a repeat export gets a ` (1)`, ` (2)`… suffix;
 - file names: `AC-YYYY-MM-DD-<chat title>.<ext>` / `ZC-YYYY-MM-DD-<chat title>.<ext>`; in the ZCode mode chats are additionally sorted into project folders.
+
+## Requirements
+
+- Windows 8.1 or newer, 64-bit (verified on 8.1, 10 and 11; does not run on Windows 7 — the Python 3.12 build no longer supports it);
+- no Python installation needed;
+- AutoClaw and ZCode do not have to be installed: the databases are plain files, and the app works with their **local copies** — copy `runtime.sqlite` / `db.sqlite` to a flash drive and pick it via the "SQL database" button; this allows exporting chats even on old Windows where AutoClaw/ZCode themselves cannot run.
 
 ## Install and run
 
@@ -91,7 +97,9 @@ Copy the error text (Ctrl+C in the window, or the "Copy" button in the export-er
 
 ## Links
 
-Repository: <https://github.com/vadimrm/AutoClaw.Z.ai-ExportChat>
+Repository (GUI): <https://github.com/vadimrm/Z.ai-ChatsExporter>
+
+Parent project — the console AutoClaw chat export utility: <https://github.com/vadimrm/AutoClaw.Z.ai-ExportChat>
 
 ## License
 
