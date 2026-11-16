@@ -30,7 +30,9 @@ Copyright © 2026 by Vadim Madgazin & ZCode (Z.ai)
 
 ## 安装与运行
 
-成品版无需安装 Python：从 Releases 下载 **ExportChat.exe**，双击运行。
+Windows 版本的发布包可在此下载：<https://github.com/vadimrm/Z.ai-ChatsExporter/releases>
+
+成品版无需安装 Python：从最新 release 下载 `Z.ai-ChatsExporter-…-win64.zip`（内含 `ExportChat.exe`、出厂 `db_profiles.cfg` 和简短说明），解压后双击运行。
 
 设置保存在 exe 旁的 `ExportChat.cfg`（首次启动时创建；便携式；从不使用注册表和 %APPDATA%；UTF-8 带 BOM——旧版记事本也能正常编辑）。两个数据库的标准文件名与全部标准位置保存在单独的可手动编辑的 **db_profiles.cfg**（随程序附在 exe 旁；注明针对哪些 AutoClaw/ZCode 版本验证过）：程序在启动时读取它且从不覆盖——如果应用更改了数据库位置，用文本编辑器修改即可，无需重新打包 exe。若文件被删除或损坏，程序会提示，损坏文件保存为 `db_profiles.cfg.err`，并写入出厂文件。
 
@@ -96,6 +98,8 @@ ZCode——`~/.zcode/cli/db/db.sqlite`，表 `session` / `message` / `part`；�
 请复制错误文本（窗口内 Ctrl+C，或「导出错误」窗口中的「复制」按钮）并发送给作者——没有准确的错误文本就无法定位原因。
 
 ## 相关链接
+
+Windows 发布包：<https://github.com/vadimrm/Z.ai-ChatsExporter/releases>
 
 仓库（GUI）：<https://github.com/vadimrm/Z.ai-ChatsExporter>
 

@@ -30,7 +30,9 @@ Copyright © 2026 by Vadim Madgazin & ZCode (Z.ai)
 
 ## Install and run
 
-The ready-made build needs no Python: download **ExportChat.exe** from Releases and double-click it.
+Windows releases are available here: <https://github.com/vadimrm/Z.ai-ChatsExporter/releases>
+
+The ready-made build needs no Python: download `Z.ai-ChatsExporter-…-win64.zip` from the latest release (it contains `ExportChat.exe`, the factory `db_profiles.cfg` and a short manual), unpack and double-click.
 
 Settings live in `ExportChat.cfg` next to the exe (created on first start; portable; the registry and %APPDATA% are never touched; UTF-8 with BOM — easy to edit even in old Notepad). The standard file names and all standard locations of both databases live in a separate human-editable **db_profiles.cfg** (shipped next to the exe; with a note on which AutoClaw/ZCode versions the paths were verified against): the program reads it at startup and never overwrites it — if an app changes where it keeps its database, just fix the paths with a text editor, no exe rebuild needed. If the file is deleted or corrupted, the program tells you, keeps the broken file as `db_profiles.cfg.err` and writes the factory one.
 
@@ -96,6 +98,8 @@ The connection is opened in `mode=ro`; nothing is ever written to the databases.
 Copy the error text (Ctrl+C in the window, or the "Copy" button in the export-errors dialog) and send it to the author — without the exact text the cause cannot be found.
 
 ## Links
+
+Windows releases: <https://github.com/vadimrm/Z.ai-ChatsExporter/releases>
 
 Repository (GUI): <https://github.com/vadimrm/Z.ai-ChatsExporter>
 
